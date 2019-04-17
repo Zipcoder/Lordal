@@ -6,7 +6,7 @@ use App\Pivots\AssignmentPivot;
 
 class Assessment extends BaseModel
 {
-    protected $fillable = ['url', 'name', 'level', 'gradable', 'max_score', 'assigned_date', 'due_date', 'autograde'];
+    protected $fillable = ['url', 'name', 'level', 'gradable', 'max_score', 'passing_score', 'assigned_date', 'due_date', 'autograde'];
 
     protected $casts = [
         'assigned_date' => 'datetime:Y-m-d H:i:s',

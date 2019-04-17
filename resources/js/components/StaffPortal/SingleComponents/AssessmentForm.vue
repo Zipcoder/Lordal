@@ -46,6 +46,8 @@
             <div class="form-group col-md-6" v-if="assessment.gradable">
                 <label class="form-label" for="max_score">Max Score</label>
                 <input class="form-control" type="number" v-model="assessment.max_score" name="max_score">
+                <label class="form-label" for="passing_score">Passing Score</label>
+                <input class="form-control" type="number" v-model="assessment.passing_score" name="passing_score">
             </div>
             <div class="col-12">
                 <button v-on:click="createAssessment" class="btn btn-success">Create Assessment</button>
