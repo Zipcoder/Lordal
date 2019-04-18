@@ -4,7 +4,7 @@ namespace App;
 use Carbon\Carbon;
 use App\Pivots\AssignmentPivot;
 
-class Acheivement extends BaseModel
+class Achievement extends BaseModel
 {
     protected $fillable = ['url', 'name', 'level', 'gradable', 'max_score', 'passing_score', 'assigned_date', 'due_date', 'autograde'];
 

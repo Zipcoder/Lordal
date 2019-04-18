@@ -2,7 +2,7 @@
 
 namespace App;
 
-class AcheivementAssignment extends BaseModel
+class AchievementAssignment extends BaseModel
 {
     protected $fillable = ['student_id','assessment_id'];
 
@@ -17,7 +17,7 @@ class AcheivementAssignment extends BaseModel
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
     public function assessment() {
-        return $this->belongsTo(Acheivement::class);
+        return $this->belongsTo(Achievement::class);
     }
 
 /*    public function submission() {
