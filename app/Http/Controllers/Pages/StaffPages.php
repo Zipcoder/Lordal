@@ -64,6 +64,12 @@ class StaffPages extends Controller
         return view('reports');
     }
 
+    public function student_breakdown_reports($student_id) {
+        return view('student_breakdown_reports')
+            ->with(['student_id' => $student_id]);
+
+    }
+
     public function updateAssessment($assessment_id) {
         return view('update_assessment')
             ->with(['assessment_id' => $assessment_id]);
