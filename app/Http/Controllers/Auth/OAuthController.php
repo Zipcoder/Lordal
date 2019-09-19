@@ -11,7 +11,7 @@ class OAuthController extends Controller
 {
 
     protected $redirectStudent = '/student/profile';
-    protected $redirectStaff = '/staff/students';
+    protected $redirectStaff = '/staff/feed';
     protected $redirectError = '/';
 
     /**
@@ -46,7 +46,7 @@ class OAuthController extends Controller
     {
         $user = Socialite::driver('github')->user();
 
-        $auth_student = Student::with('user')->where('github_username', $user->nickname)->first();
+        $auth_student = Student::with('user')->where('github_username', strtolower($user->nickname))->first();
 
         if( !$auth_student ) {
             toastr()->error('Students must be registered with their github username before being able to sign in. Please contact an admin and request access', 'Not Registered');
@@ -83,13 +83,13 @@ class OAuthController extends Controller
     {
         $user = Socialite::driver('google')->user();
 
-        if( !isset($user->user['domain']) ) {
+        if( !isset($user->user['hd']) ) {
             toastr()->error('To login as a staff member you must log in with a Zip Code Wilmington email address', 'Invalid Domain');
 
             return redirect($this->redirectError);
         }
 
-        if( $user->user['domain'] != 'zipcodewilmington.com' ) {
+        if( $user->user['hd'] != 'zipcodewilmington.com' ) {
             toastr()->error('To login as a staff member you must log in with a Zip Code Wilmington email address', 'Invalid Domain');
             return redirect($this->redirectError);
         }

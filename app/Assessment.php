@@ -11,6 +11,8 @@ class Assessment extends BaseModel
     protected $casts = [
         'assigned_date' => 'datetime:Y-m-d H:i:s',
         'due_date' => 'datetime:Y-m-d H:i:s',
+        'autograde' => 'boolean',
+        'gradable' => 'gradable',
     ];
 
     protected $dateFormat = 'Y-m-d H:i:s';

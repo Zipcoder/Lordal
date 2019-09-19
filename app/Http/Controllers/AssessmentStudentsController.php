@@ -52,6 +52,7 @@ class AssessmentStudentsController extends Controller
             ->whereNotIn('students.id',
                 Assignment::where('assessment_id', $assessment->id)
                     ->select('student_id'))
+            ->where(['dismissed' => false])
             ->get();
 
         $assessment->students()->attach($student_ids);

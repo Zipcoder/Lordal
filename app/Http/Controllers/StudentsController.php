@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use App\Student;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -26,7 +27,16 @@ class StudentsController extends Controller
      */
     public function store(Request $request)
     {
-        return response()->json(Student::create($request->all()), Response::HTTP_CREATED);
+        $user_data = $request->only(['name', 'email']);
+        $user_data['staff'] = false;
+
+        $student_user = User::create($user_data);
+
+        $student = $student_user->student()->create(
+            $request->only(['cell_number', 'github_username'])
+        );
+
+        return response()->json( $student, Response::HTTP_CREATED );
     }
 
     /**

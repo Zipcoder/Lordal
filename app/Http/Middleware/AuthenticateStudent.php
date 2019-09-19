@@ -21,7 +21,6 @@ class AuthenticateStudent
                 return redirect()->route('api.error.401');
             }
 
-            toastr()->error('The requested resource is not available for Staff');
             return redirect('/staff');
         }
 

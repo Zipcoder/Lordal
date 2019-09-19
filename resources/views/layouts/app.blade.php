@@ -61,7 +61,9 @@
                             </li>
                         @else
                             @if(Auth::user()->isStaff())
+                                <li class="nav-item"><a class="nav-link" href="{{ route('staffportal.feed') }}">Comments Feed</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{ route('staffportal.students') }}">Students</a></li>
+                                <li class="nav-item"><a class="nav-link" href="{{ route('staffportal.students.new') }}">New Student</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{ route('staffportal.assessments.new') }}">New Assignment</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{ route('staffportal.labs') }}">Labs</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{ route('staffportal.exams') }}">Exams</a></li>

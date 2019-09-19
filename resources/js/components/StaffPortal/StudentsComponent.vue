@@ -8,6 +8,7 @@
                         <th @click="sort('user.name')">Name</th>
                         <th @click="sort('github_username')">Github</th>
                         <th @click="sort('user.email')">Email</th>
+                        <th @click="sort('user.dismissed')">Dismissed?</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -16,6 +17,7 @@
                       <td><a :href="'/staff/students/' + student.id">{{student["user.name"]}}</a></td>
                       <td><a target="_blank" :href="'https://github.com/' + student['github_username']">{{student["github_username"]}}</a></td>
                       <td><a :href="'/staff/students/' + student.id">{{student["user.email"]}}</a></td>
+                      <td><a :href="'/staff/students/' + student.id">{{student["dismissed"] == 1 ? "Yes" : "No"}}</a></td>
                     </tr>
                 </tbody>
             </table>
@@ -37,7 +39,9 @@
             window.axios.get('/api/students')
                 .then(function(response) {
                     response.data.forEach((student) => {
-                        self.students.push((self.$root.flattenObject(student)));
+                        if (student.dont_track != true){
+                            self.students.push((self.$root.flattenObject(student)));
+                        }
                     });
                     self.activeStudent = self.students[0];
                 });

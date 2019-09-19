@@ -24,6 +24,23 @@
                 <label for="github_id">Github ID</label>
                 <input class="form-control" type="text" name="github_id" v-model="student.github_id">
             </div>
+            <div class="form-group">
+                <label for="serial_number">Macbook Serial Number</label>
+                <input class="form-control" type="text" name="serial_number" v-model="student.serial_number">
+            </div>
+
+
+            <div class="row">            
+                <div class="form-group col-sm-6">
+                    <label for="dismissed">Dismissed?</label>
+                    <input class="form-control" type="checkbox" name="dismissed" v-model="student.dismissed">
+                </div>
+
+                <div class="form-group col-sm-6">
+                    <label for="dont_track">Don't Track</label>
+                    <input class="form-control" type="checkbox" name="dont_track" v-model="student.dont_track">
+                </div>
+            </div>
 
             <button class="btn btn-success" v-on:click="updateStudent()">Update Student</button>
         </div>

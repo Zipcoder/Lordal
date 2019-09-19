@@ -6,7 +6,21 @@ use App\Pivots\AssignmentPivot;
 
 class Student extends BaseModel
 {
-    protected $fillable = ['cell_number','github_id','github_username','section','user_id'];
+    protected $fillable = [
+          'cell_number'
+        , 'github_id'
+        , 'github_username'
+        , 'section'
+        , 'serial_number'
+        , 'user_id'
+        , 'dismissed'
+        , 'dont_track'
+    ];
+
+    protected $casts = [
+        'dismissed' => 'boolean',
+        'dont_track' => 'boolean',
+    ];
 
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany

@@ -23,7 +23,6 @@ class AuthenticateStaff
                 return redirect()->route('api.error.401');
             }
 
-            toastr()->error('The requested resource is not available for students');
             return redirect('/student/profile');
         }
 

@@ -20,5 +20,7 @@ $factory->define(App\Student::class, function (Faker $faker) {
         , "github_username" => $faker->userName
         , "section"         => ""
         , "user_id"         => $faker->randomDigitNotNull
+        , "dont_track"      => false
+        , "dismissed"       => false
     ];
 });

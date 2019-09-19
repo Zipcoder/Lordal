@@ -21,6 +21,7 @@ Route::middleware(['auth:api', 'auth.staff'])->group(function () {
     Route::apiResource('assessments/{assessment}/students', 'AssessmentStudentsController')->except(['index']);
     Route::apiResource('students/{student_id}/assessments', 'StudentAssessmentsController')->only(['index']);
     Route::apiResource('students/{student}/comments', 'StudentCommentsController');
+    Route::post('grader/{assignment_id}', 'GraderController')->name('grader.submit');
 });
 
 Route::middleware(['auth:api', 'auth.student'])->namespace("LearnerApi")->prefix("learner")->group(function () {

@@ -24,7 +24,7 @@ class StaffPages extends Controller
      */
     public function index()
     {
-        return redirect('/staff/students');
+        return redirect('/staff/feed');
     }
 
     public function assessments() {
@@ -37,6 +37,10 @@ class StaffPages extends Controller
 
     public function students() {
         return view('students');
+    }
+
+    public function create_student() {
+        return view('create_student');
     }
 
     public function student($student_id) {
@@ -67,7 +71,9 @@ class StaffPages extends Controller
     public function student_breakdown_reports($student_id) {
         return view('student_breakdown_reports')
             ->with(['student_id' => $student_id]);
-
+    }
+    public function feed() {
+        return view('feed');
     }
 
     public function updateAssessment($assessment_id) {

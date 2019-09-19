@@ -25,7 +25,8 @@ class GradeAssessment implements ShouldQueue
      */
     public static function dispatch()
     {
-        return new PendingRawDispatch(new static(...func_get_args()));
+        return (new PendingRawDispatch(new static(...func_get_args())))
+            ->onConnection(\Config::get('queue.no_handle'));
     }
 
     /**

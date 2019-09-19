@@ -15,7 +15,7 @@ class CommentsController extends Controller
      */
     public function index()
     {
-        return response()->json(Comment::all());
+        return response()->json(Comment::with(['user', 'student.user'])->get());
     }
 
     /**

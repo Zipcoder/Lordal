@@ -15,6 +15,10 @@ return [
 
     'default' => env('QUEUE_CONNECTION', 'sync'),
 
+    // This queue should be used for jobs that aren't handled
+    // by Laravel's job handling.
+    'no_handle' => env('QUEUE_CONNECTION_NOHANDLE', 'sync'),
+
     /*
     |--------------------------------------------------------------------------
     | Queue Connections

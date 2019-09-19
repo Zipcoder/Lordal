@@ -34,7 +34,7 @@
 
         <button class="btn btn-success" v-on:click="updateAssessment()">Update Assessment</button>
 
-        <submissions v-bind:assessment_id="assessment_id"></submissions>
+        <submissions v-bind:assessment_id="assessment_id" :gradable="assessment.gradable"></submissions>
     </div>
 </template>
 
