@@ -19,7 +19,8 @@ $factory->define(App\Assessment::class, function (Faker $faker) {
     	, "name" => str_random(20)
     	, "level" => ['Quiz', 'Lab', 'Exam'][$faker->numberBetween(0,2)]
     	, "gradable" => $faker->boolean
-    	, "max_score" => 100
+        , "max_score" => 100
+        , "passing_score" => 60
     	, "assigned_date" => Carbon::now()
     	, "due_date" => Carbon::now()->addDays(7)
     ];

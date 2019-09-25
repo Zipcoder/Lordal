@@ -4,15 +4,13 @@ namespace App;
 use Carbon\Carbon;
 use App\Pivots\AssignmentPivot;
 
-class Assessment extends BaseModel
+class Achievement extends BaseModel
 {
     protected $fillable = ['url', 'name', 'level', 'gradable', 'max_score', 'passing_score', 'assigned_date', 'due_date', 'autograde'];
 
     protected $casts = [
         'assigned_date' => 'datetime:Y-m-d H:i:s',
         'due_date' => 'datetime:Y-m-d H:i:s',
-        'autograde' => 'boolean',
-        'gradable' => 'gradable',
     ];
 
     protected $dateFormat = 'Y-m-d H:i:s';

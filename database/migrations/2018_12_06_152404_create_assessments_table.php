@@ -20,6 +20,7 @@ class CreateAssessmentsTable extends Migration
             $table->enum('level', ['Quiz', 'Lab', 'Exam']);
             $table->boolean('gradable');
             $table->integer('max_score')->nullable();
+            $table->integer('passing_score')->nullable();
             $table->dateTime('assigned_date');
             $table->dateTime('due_date');
             $table->timestamps();
