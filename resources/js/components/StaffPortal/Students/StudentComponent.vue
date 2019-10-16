@@ -44,6 +44,7 @@
 
             <button class="btn btn-success" v-on:click="updateStudent()">Update Student</button>
         </div>
+        <h2 class="mt-5"><a href="/staff/students/{{student.id}}/performance">Performance Report</a></h2>
 
         <h1 class="mt-5">Assessments</h1>
         <div  id="student_assessments" class="justify-content-center mt-5 mb-5">
