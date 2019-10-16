@@ -145,3 +145,9 @@ window.chartColors = {
 	/* eslint-enable */
 
 }(this));
+
+/* validation */
+jQuery('input[name ="github_username"]').blur(function () {
+	var valueName = jQuery('input[name ="github_username"]').val();
+	jQuery('input[name ="github_username"]').val(valueName.toLowerCase());
+});
