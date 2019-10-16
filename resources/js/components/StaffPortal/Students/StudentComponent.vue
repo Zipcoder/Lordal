@@ -1,6 +1,7 @@
 <template>
     <div class="container mb-5">
         <div id="user_info" class="row mb-3">
+            <h2 class="mt-5"><a href="/staff/students/{{student.id}}/performance">Performance Report</a></h2>
             <div class="col-6"><span><span class="font-weight-bold"> Name: </span> {{student.user.name}}</span></div>
             <div class="col-6"><span><span class="font-weight-bold"> Email: </span>{{student.user.email}}</span></div>
             <div class="col-6"><span><span class="font-weight-bold"> Created_at: </span>{{student.user.created_at}}</span></div>
@@ -44,7 +45,6 @@
 
             <button class="btn btn-success" v-on:click="updateStudent()">Update Student</button>
         </div>
-        <h2 class="mt-5"><a href="/staff/students/{{self.student.id}}/performance">Performance Report</a></h1>
 
         <h1 class="mt-5">Assessments</h1>
         <div  id="student_assessments" class="justify-content-center mt-5 mb-5">
