@@ -1,7 +1,8 @@
 <template>
     <div class="container mb-5">
         <div id="user_info" class="row mb-3">
-            <div class="col-6"><a href="{{url('/staff/students/'+student.id ='/performance')}}" id="perf-rep-link">{{student.id}}Performance Report</a></div>
+        <div class="col-6 hidden">{{student.id}}</div>
+            <div class="col-6"><a href="/staff/students/student.id/performance" id="perf-rep-link">Performance Report</a></div>
             <div class="col-6"><span><span class="font-weight-bold"> Name: </span> {{student.user.name}}</span></div>
             <div class="col-6"><span><span class="font-weight-bold"> Email: </span>{{student.user.email}}</span></div>
             <div class="col-6"><span><span class="font-weight-bold"> Created_at: </span>{{student.user.created_at}}</span></div>
