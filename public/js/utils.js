@@ -152,7 +152,7 @@ jQuery('input[name ="github_username"]').blur(function () {
 	jQuery('input[name ="github_username"]').val(valueName.toLowerCase());
 });
 
-jQuery.when(jQuery('#student_id')).then((self) => {
+jQuery.when(jQuery('#student_id') && jQuery('#perf-rep-link')).then((self) => {
    var student_id = jQuery('#student_id').html();
    var pathToReportRaw = jQuery('#perf-rep-link').pathname;
    var pathToReportFinal = pathToReportRaw.replace("student.id", student_id);
