@@ -151,3 +151,12 @@ jQuery('input[name ="github_username"]').blur(function () {
 	var valueName = jQuery('input[name ="github_username"]').val();
 	jQuery('input[name ="github_username"]').val(valueName.toLowerCase());
 });
+
+jQuery.when($('#student_id')).then((self) => {
+
+	console.log(self); 
+   var contents = jQuery('#student_id').html();
+   alert(contents);
+   
+	});
+   
