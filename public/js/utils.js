@@ -154,9 +154,9 @@ jQuery('input[name ="github_username"]').blur(function () {
 
 jQuery.when(jQuery('#student_id') && jQuery('#perf-rep-link')).then((self) => {
    var student_id = jQuery('#student_id').html();
-   var pathToReportRaw = jQuery('#perf-rep-link').pathname;
+   var pathToReportRaw = jQuery('#perf-rep-link').attr("href");
    var pathToReportFinal = pathToReportRaw.replace("student.id", student_id);
 
-   jQuery('#perf-rep-link').pathname = pathToReportFinal;
+   jQuery('#perf-rep-link').attr("href",pathToReportFinal);
 });
    
