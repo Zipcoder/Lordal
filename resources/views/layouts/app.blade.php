@@ -23,6 +23,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/vue-datetime.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/zcw.css') }}" rel="stylesheet">
     @toastr_css
 </head>
 <body>
