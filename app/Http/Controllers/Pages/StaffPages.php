@@ -72,6 +72,9 @@ class StaffPages extends Controller
         return view('student_breakdown_reports')
             ->with(['student_id' => $student_id]);
     }
+    public function class_breakdown_reports() {
+        return view('class_overview_report');
+    }
     public function feed() {
         return view('feed');
     }

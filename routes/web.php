@@ -8,6 +8,7 @@ Route::namespace("Pages")->group(function () {
 	Route::get('/staff/assessments', 'StaffPages@assessments')->name('staffportal.assessments');
 	Route::get('/staff/assessments/new', 'StaffPages@create_assessment')->name('staffportal.assessments.new');
     Route::get('/staff/students', 'StaffPages@students')->name('staffportal.students');
+    Route::get('/staff/cohort/overview', 'StaffPages@class_overview_report')->name('staffportal.class_overview_report');
     Route::get('/staff/students/new', 'StaffPages@create_student')->name('staffportal.students.new');
 	Route::get('/staff/students/{student_id}', 'StaffPages@student')->name('staffportal.student');
     Route::get('/staff/students/{student_id}/performance', 'StaffPages@student_breakdown_reports')->name('staffportal.student_breakdown_reports');
