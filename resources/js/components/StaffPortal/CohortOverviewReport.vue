@@ -17,7 +17,7 @@
     }
 </style>
 <template>
-<div id="content">
+<div class="container">
 <div id="listing">
     <h3>Students by Outstanding Labs Assigned/Completed</h3>
     <div id="students-breakdown">

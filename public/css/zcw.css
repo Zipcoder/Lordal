@@ -9,11 +9,9 @@ div#overview-reports {
 
 div#comments-rail {
     float: left;
-    width: 35%;
 }
-@media only screen and (min-width: 1162px) {
+@media (min-width: 1162px) {
     div#comments-rail {
-        float: left;
         width: 35%;
     }
 }
