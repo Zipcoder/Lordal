@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-<students></students>
+    <cohort-overview></cohort-overview>
 @endsection

@@ -46,6 +46,7 @@ Vue.component('labs', require('./components/StaffPortal/LabsComponent.vue'));
 Vue.component('exams', require('./components/StaffPortal/ExamsComponent.vue'));
 Vue.component('quizzes', require('./components/StaffPortal/QuizzesComponent.vue'));
 Vue.component('student-report', require('./components/StaffPortal/StudentReport.vue'));
+Vue.component('cohort-overview', require('./components/StaffPortal/CohortOverviewReport.vue'));
 Vue.component('comments-feed', require('./components/StaffPortal/FeedComponent.vue'));
 Vue.component('student-form', require('./components/StaffPortal/StudentForm.vue'));
 
