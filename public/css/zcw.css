@@ -1,3 +1,21 @@
  div#student_id.hidden {
     visibility: hidden;
 }
+
+div#overview-reports {
+    float: left;
+    margin: 0 10px;
+}
+
+div#comments-rail {
+    float: left;
+    width: 35%;
+}
+@media only screen and (min-width: 1162px) {
+    div#comments-rail {
+        float: left;
+        width: 35%;
+    }
+}
+
+
