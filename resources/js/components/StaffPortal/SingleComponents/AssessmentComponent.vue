@@ -21,6 +21,8 @@
             <div class="form-group col-md-6">
                 <label for="max_score">Max Score</label>
                 <input class="form-control" type="number" name="max_score" v-model="assessment.max_score">
+                <label class="form-label" for="passing_score">Passing Score</label>
+                <input class="form-control" type="number" v-model="assessment.passing_score" name="passing_score">
             </div>
             <div class="form-group col-md-6">
                 <label for="assigned_date">Assigned Date</label>
