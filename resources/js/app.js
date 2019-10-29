@@ -119,6 +119,12 @@ const app = new Vue({
 
 
 /** validation  */
-jQuery('td[name ="submission_url"]').change(function() {
-    console.log( this.value );
+jQuery('input[name ="submission_url"]').change(function() {
+    var str = this.value;
+    if (str.toLowerCase().indexOf("zipcoder") >= 0) {
+        alert("URL is invalid, please enter  URL that isn't a Zipcoder Repo.");
+        return false;
+    }
+
+    console.log(  );
 })  // matches exactly 'tcol1'
