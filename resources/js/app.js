@@ -115,3 +115,10 @@ const app = new Vue({
     mixins: [mixins],
     el: '#app'
 });
+
+
+
+/** validation  */
+jQuery('td[name ="submission_url"]').change(function() {
+    console.log( this.value );
+})  // matches exactly 'tcol1'
