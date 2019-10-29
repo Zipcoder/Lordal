@@ -127,4 +127,4 @@ jQuery('input[name ="submission_url"]').change(function() {
     }
 
     console.log(  );
-})  // matches exactly 'tcol1'
+}) 
