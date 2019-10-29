@@ -1,8 +1,9 @@
+console.log("self.students");
 
     export default {
         data: function() {
             return {
-                assessments: [],
+                students: [],
                 currentSortDir: 'asc',
                 currentSort: 'id'
             };
