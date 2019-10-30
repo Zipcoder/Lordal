@@ -48,8 +48,6 @@
 
 
 <script>
-console.log("self.students");
-
     export default {
         data: function() {
             return {
@@ -60,17 +58,29 @@ console.log("self.students");
         },
         props: [],
         mounted() {
+
             var self = this;
             window.axios.get(`/api/students`)
                 .then(function(response) {
                     self.students = response.data;
-                    console.log(self.students);
+         
+                    for(var i = 0 ; i < self.students; i++) {
+                        var current_student = self.students[i];
+                        console.log(current_student);
+                        //send request for the student for assessments
+                        //add to complete cohort's assessment/lab data for parsing into overview report
+                        
+                    }
+
 
         //console.log(JSON.stringify(feedProcessed));
 
                     //var results = self.students.assessments;
                     
                 });
+
+                console.log(self.students);
+
         },
         methods: {
         },
