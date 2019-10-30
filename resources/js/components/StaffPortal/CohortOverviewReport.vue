@@ -58,13 +58,12 @@
         },
         props: [],
         mounted() {
-
             var self = this;
             window.axios.get(`/api/students`)
                 .then(function(response) {
                     self.students = response.data;
          
-                    for(var i = 0 ; i < self.students; i++) {
+                    for(var i = 0 ; i < self.students.length; i++) {
                         var current_student = self.students[i];
                         console.log(current_student);
                         //send request for the student for assessments
@@ -78,9 +77,6 @@
                     //var results = self.students.assessments;
                     
                 });
-
-                console.log(self.students);
-
         },
         methods: {
         },
