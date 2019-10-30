@@ -49,6 +49,7 @@
 
 <script>
     console.log("current_student");
+    var student_ids = new Array();
     export default {
         data: function() {
             return {
@@ -66,7 +67,7 @@
          
                     for(var i = 0 ; i < self.students.length; i++) {
                         var current_student = self.students[i];
-                        console.log(current_student);
+                        student_ids.push(current_student.id);
                         //send request for the student for assessments
                         //add to complete cohort's assessment/lab data for parsing into overview report
                         
@@ -78,6 +79,10 @@
                     //var results = self.students.assessments;
                     
                 });
+        
+        
+        console.log(student_ids);
+
         },
         methods: {
         },
