@@ -48,6 +48,7 @@
 
 
 <script>
+    console.log("current_student");
     export default {
         data: function() {
             return {
