@@ -83,7 +83,7 @@
         
             console.log(student_ids);
             for(var i = 0; i < student_ids.length; i++){
-            window.axios.get(`/api/students/36/assessments`)
+            window.axios.get(`/api/students/`+ student_ids[i] +`/assessments`)
                 .then(function(response) {
                     current_student_info = response.data;
                     console.log(current_student_info);         
