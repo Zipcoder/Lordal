@@ -82,14 +82,15 @@
         
         
             for(var i = 0; i < student_ids.length; i++){
-            window.axios.get(`/api/students/`+ student_ids[i] +`/assessments`)
-                .then(function(response) {
+                var api_path = `/api/students/`+ student_ids[i] +`/assessments`;
+                window.axios.get(api_path).then(function(response) {
                     current_student_info = response.data;
                     console.log(current_student_info);         
                     
                 });
+                console.log(api_path);
             }
-                        console.log("student_ids");
+                        
 
 
         },
