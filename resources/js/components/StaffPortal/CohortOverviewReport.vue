@@ -48,7 +48,19 @@
 
 
 <script>
-    console.log("current_student");
+
+    function callStudentSubmissionData(id){
+        console.log(id);
+        var api_path = `/api/students/`+ id +`/assessments`;
+        window.axios.get(api_path).then(function(response) {
+            current_student_info = response.data;
+            console.log(current_student_info);         
+            
+        });
+        console.log(api_path);
+    }
+
+        console.log("calling");
     var student_ids = new Array();
     export default {
         data: function() {
@@ -79,17 +91,11 @@
                     //var results = self.students.assessments;
                     
                 });
+
+
+            student_ids.forEach(callStudentSubmissionData);
         
         
-            for(var i = 0; i < student_ids.length; i++){
-                var api_path = `/api/students/`+ student_ids[i] +`/assessments`;
-                window.axios.get(api_path).then(function(response) {
-                    current_student_info = response.data;
-                    console.log(current_student_info);         
-                    
-                });
-                console.log(api_path);
-            }
                         
 
 
