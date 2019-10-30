@@ -52,11 +52,11 @@
     function callStudentSubmissionData(id){
         console.log(id);
         var api_path = `/api/students/`+ id +`/assessments`;
-        window.axios.get(api_path).then(function(response) {
+        /*window.axios.get(api_path).then(function(response) {
             current_student_info = response.data;
             console.log(current_student_info);         
             
-        });
+        });*/
         console.log(api_path);
     }
 
