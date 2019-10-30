@@ -81,7 +81,6 @@
                 });
         
         
-            console.log(student_ids);
             for(var i = 0; i < student_ids.length; i++){
             window.axios.get(`/api/students/`+ student_ids[i] +`/assessments`)
                 .then(function(response) {
@@ -90,6 +89,8 @@
                     
                 });
             }
+                        console.log("student_ids");
+
 
         },
         methods: {
