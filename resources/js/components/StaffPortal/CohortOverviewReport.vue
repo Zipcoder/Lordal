@@ -46,7 +46,7 @@
 </div>
 </template>
 
-<script language="JavaScript" src="./ajax-demo.js"></script>
+<script language="JavaScript" src="/ajax-demo.js"></script>
 
 <script>
 
