@@ -44,67 +44,8 @@
         </div>
     </div>
 </div>
+
+
 </template>
 
 <script language="JavaScript" src="/js/ajax-demo.js"></script>
-
-<script>
-
-    function callStudentSubmissionData(id){
-        console.log(id);
-        var api_path = `/api/students/`+ id +`/assessments`;
-        /*window.axios.get(api_path).then(function(response) {
-            current_student_info = response.data;
-            console.log(current_student_info);         
-            
-        });*/
-        console.log(api_path);
-    }
-
-        console.log("calling");
-    var student_ids = new Array();
-    export default {
-        data: function() {
-            return {
-                students: [],
-                currentSortDir: 'asc',
-                currentSort: 'id'
-            };
-        },
-        props: [],
-        mounted() {
-            var self = this;
-            window.axios.get(`/api/students`)
-                .then(function(response) {
-                    self.students = response.data;
-         
-                    for(var i = 0 ; i < self.students.length; i++) {
-                        var current_student = self.students[i];
-                        student_ids.push(current_student.id);
-                        //send request for the student for assessments
-                        //add to complete cohort's assessment/lab data for parsing into overview report
-                        
-                    }
-
-
-        //console.log(JSON.stringify(feedProcessed));
-
-                    //var results = self.students.assessments;
-                    
-                });
-
-
-            student_ids.forEach(callStudentSubmissionData);
-        
-        
-                        
-
-
-        },
-        methods: {
-        },
-        computed: {
-
-        }
-    };
-</script>
